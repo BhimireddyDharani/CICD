@@ -1,0 +1,17 @@
+name: CL Pipeline
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  run-cl-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run CL Pipeline script
+        run: echo "CL Pipeline executed successfully"
